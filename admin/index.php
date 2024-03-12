@@ -7,14 +7,14 @@
 
             <!-- item 1 -->
             <div class="col-4 text-center">
-                <h1>5</h1>
+                <h1>6</h1>
                 <br/>
                 Categories
             </div>
             
             <!-- item 2 -->
             <div class="col-4 text-center">
-                <h1>5</h1>
+                <h1>3</h1>
                 <br/>
                 Categories
             </div>
