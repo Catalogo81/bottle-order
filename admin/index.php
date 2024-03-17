@@ -7,30 +7,30 @@
 
             <!-- item 1 -->
             <div class="col-4 text-center">
-                <h1>6</h1>
+                <h1>16</h1>
                 <br/>
                 Categories
             </div>
             
             <!-- item 2 -->
             <div class="col-4 text-center">
-                <h1>3</h1>
+                <h1>37</h1>
                 <br/>
-                Categories
+                Bottle Items
             </div>
             
             <!-- item 3 -->
             <div class="col-4 text-center">
-                <h1>5</h1>
+                <h1>500</h1>
                 <br/>
-                Categories
+                Total Orders
             </div>
             
             <!-- item 4 -->
             <div class="col-4 text-center">
-                <h1>5</h1>
+                <h1>R54 000</h1>
                 <br/>
-                Categories
+                Total Revenue
             </div>
 
         <div class="clearfix"></div>
@@ -39,4 +39,5 @@
     </div>
     <!-- Main Section End -->
 
-<?php include('partials/footer.php');?>
+    </body>
+</html>
