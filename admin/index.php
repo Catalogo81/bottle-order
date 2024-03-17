@@ -5,6 +5,18 @@
         <div class="wrapper">
             <h1>DASHBOARD</h1>
 
+            <br><br>
+
+            <?php
+                if(isset($_SESSION['login']))
+                {
+                    echo $_SESSION['login'];
+                    unset($_SESSION['login']);
+                }
+            ?>
+
+            <br><br>
+
             <!-- item 1 -->
             <div class="col-4 text-center">
                 <h1>16</h1>

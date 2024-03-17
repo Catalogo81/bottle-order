@@ -123,3 +123,20 @@ table tr td{
     /* background-color: #0066cc; */
     color: white;
 }
+
+
+/* CSS for Login */
+.login{
+    width: 30%;
+    border: 1px solid grey;
+    margin: 10% auto; /*enters the box*/
+    padding: 5%;
+}
+
+.error{
+    color: rgb(175, 5, 5);
+}
+
+.success{
+    color: rgb(3, 122, 33);
+}

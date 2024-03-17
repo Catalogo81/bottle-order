@@ -5,9 +5,10 @@ Online store for clients to order bottles by size. Admin side manages the orders
 1. HTML5
 2. CSS3
 3. PHP
+4. JavaScript
 
 
-## Pages on this Complete Free Template
+## Pages 
 1. **index.html** - Home Page (Search Food, Some Categories, Featured Foods, Social Media link)
 2. **categories.html** - List all Categories on Single Page
 3. **bottles.html** - List all bottles on a single page
