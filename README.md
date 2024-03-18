@@ -8,14 +8,21 @@ Online store for clients to order bottles by size. Admin side manages the orders
 4. JavaScript
 
 
-## Pages 
+## Frontend Pages 
 1. **index.html** - Home Page (Search Food, Some Categories, Featured Foods, Social Media link)
-2. **categories.html** - List all Categories on Single Page
-3. **bottles.html** - List all bottles on a single page
+2. **categories.html** - Lists all Categories on Single Page
+3. **bottles.html** - Lists all bottles on a single page
 4. **order.html** - Page to Order Selected Food
 5. **category_bottle.html** - Page to list all the Bottle based on Category Selected
 6. **bottle_search.html** - Page to list all the Bottle based on Search keyword
 
+## Backend Pages 
+1. **index.php** - Admin Dashboard (Categories, Bottle Items, Total Orders, Total Revenue)
+2. **manage-admin.php** - Lists all Administrators
+3. **manage-categories.php** - Lists all bottle categories on a single page
+4. **manage-bottles.php** - Lists all bottles on a single page
+5. **manage-orders.php** - Manages all Orders in the database (Actions: pending, successful, declined, delete)
+6. **login/logout.php** - Admin Access Control and Authorization using SQL
 
 ## For Sponsor or Project Enquiry
 1. Email - peacematjato@gmail.com
