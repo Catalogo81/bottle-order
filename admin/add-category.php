@@ -38,7 +38,7 @@
                 <tr>
                     <td>Select Image: </td>
                     <td>
-                        <input type="file" name="image">
+                        <input type="file" name="image" >
                     </td>
                 </tr>
 
@@ -89,32 +89,36 @@
                     //To uplaod the image we need image name, source path and destination path
                     $image_name = $_FILES['image']['name'];
 
-                    //Auto Rename our Image
-                    //Get the Extension of our image (jpg, png, gif, etc)
-                    $ext = end(explode('.', $image_name));
-
-                    //Rename the image
-                    $image_name = "Bottle_Category_".rand(000, 999).'.'.$ext;
-
-                    $source_path = $_FILES['image']['tmp_name'];
-
-                    $destination_path = "../images/category/".$image_name;
-
-                    //Finally Upload the image
-                    $upload = move_uploaded_file($source_path, $destination_path);
-
-                    //Check if image is uploaded or not
-                    //And if the image is not uploaded then we will stop the process and redirect with error message
-                    if($upload == false)
+                    // Upload the image only if the image is selected
+                    if($image_name != "")
                     {
-                        //Set message
-                        $_SESSION['upload'] = "<div class= 'error'> Failed to Upload Image! </div>";
+                        //Auto Rename our Image
+                        //Get the Extension of our image (jpg, png, gif, etc)
+                        $ext = end(explode('.', $image_name));
 
-                        //Redirect to Add category
-                        header('loaction:'.SITEURL.'admin/add-category.php');
+                        //Rename the image
+                        $image_name = "Bottle_Category_".rand(000, 999).'.'.$ext;
 
-                        //Stop the process to no longer add data to our database
-                        die();
+                        $source_path = $_FILES['image']['tmp_name'];
+
+                        $destination_path = "../images/category/".$image_name;
+
+                        //Finally Upload the image
+                        $upload = move_uploaded_file($source_path, $destination_path);
+
+                        //Check if image is uploaded or not
+                        //And if the image is not uploaded then we will stop the process and redirect with error message
+                        if($upload == false)
+                        {
+                            //Set message
+                            $_SESSION['upload'] = "<div class= 'error'> Failed to Upload Image! </div>";
+
+                            //Redirect to Add category
+                            header('loaction:'.SITEURL.'admin/add-category.php');
+
+                            //Stop the process to no longer add data to our database
+                            die();
+                        }
                     }
                 }
                 else

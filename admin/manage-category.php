@@ -7,13 +7,54 @@
         <br/><br/>
 
         <?php
-            //Display the message
+            //Display the message for adding a category
             if(isset($_SESSION['add']))
             {
                 echo $_SESSION['add'];
                 unset($_SESSION['add']);
             }
 
+            //Display the message for removing a category image
+            if(isset($_SESSION['remove']))
+            {
+                echo $_SESSION['remove'];
+                unset($_SESSION['remove']);
+            }
+
+            //Display the message for deleting a category data
+            if(isset($_SESSION['delete']))
+            {
+                echo $_SESSION['delete'];
+                unset($_SESSION['delete']);
+            }
+
+            //Display the message when no category is found
+            if(isset($_SESSION['no-category-found']))
+            {
+                echo $_SESSION['no-category-found'];
+                unset($_SESSION['no-category-found']);
+            }
+
+            //Display the message when category is updated
+            if(isset($_SESSION['update']))
+            {
+                echo $_SESSION['update'];
+                unset($_SESSION['update']);
+            }
+
+            //Display the message when upload image is updated
+            if(isset($_SESSION['upload']))
+            {
+                echo $_SESSION['upload'];
+                unset($_SESSION['upload']);
+            }
+
+            //Display the message when failed to upload image is updated
+            if(isset($_SESSION['failed-remove']))
+            {
+                echo $_SESSION['failed-remove'];
+                unset($_SESSION['failed-remove']);
+            }
         ?>
 
         <br><br>
@@ -88,8 +129,8 @@
                                     <td><?php echo $featured; ?></td>
                                     <td><?php echo $active; ?></td>
                                     <td>
-                                        <a href="#" class="btn-secondary">Update Category</a>
-                                        <a href="#" class="btn-danger">Delete Category</a>
+                                        <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class="btn-secondary">Update Category</a>
+                                        <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Category</a>
                                     </td>
                                 </tr>
                                                 
