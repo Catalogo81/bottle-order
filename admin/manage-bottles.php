@@ -11,12 +11,48 @@
         <br/><br/><br/>
 
         <?php
-        
+            //Display the message for successfully adding a bottle data
             if(isset($_SESSION['add']))
             {
                 echo $_SESSION['add'];
                 unset($_SESSION['add']);
             }
+
+            //Display the message for deleting a bottle data
+            if(isset($_SESSION['delete']))
+            {
+                echo $_SESSION['delete'];
+                unset($_SESSION['delete']);
+            }
+
+            //Display the message when upload image is updated
+            if(isset($_SESSION['upload']))
+            {
+                echo $_SESSION['upload'];
+                unset($_SESSION['upload']);
+            }
+
+            //Display the message when unothorized user tried to delete a bottle
+            if(isset($_SESSION['unauthorized']))
+            {
+                echo $_SESSION['unauthorized'];
+                unset($_SESSION['unauthorized']);
+            }
+
+            //Display the message when failed to upload image is updated
+            if(isset($_SESSION['failed-remove']))
+            {
+                echo $_SESSION['failed-remove'];
+                unset($_SESSION['failed-remove']);
+            }
+            
+            //Display the message when upload image is updated
+            if(isset($_SESSION['update']))
+            {
+                echo $_SESSION['update'];
+                unset($_SESSION['update']);
+            }
+
         
         ?>
 
@@ -67,7 +103,7 @@
                                 <tr>
                                     <td><?php echo $sn++; ?></td>
                                     <td><?php echo $title; ?></td>
-                                    <td><?php echo $price; ?></td>
+                                    <td>R<?php echo $price; ?></td>
 
                                     <td>
                                         <?php 
@@ -90,8 +126,8 @@
                                     <td><?php echo $featured; ?></td>
                                     <td><?php echo $active; ?></td>
                                     <td>
-                                        <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class="btn-primary">Update Bottle</a>
-                                        <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Bottle</a>
+                                        <a href="<?php echo SITEURL; ?>admin/update-bottle.php?id=<?php echo $id; ?>" class="btn-primary">Update Bottle</a>
+                                        <a href="<?php echo SITEURL; ?>admin/delete-bottle.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Bottle</a>
                                     </td>
                                 </tr>
                             <?php
