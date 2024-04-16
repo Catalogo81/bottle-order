@@ -7,34 +7,110 @@
         <br/><br/>
 
         <!-- Button to add Admin -->
-        <a href="#" class="btn-primary">Add Bottle</a>
+        <a href="<?php echo SITEURL; ?>admin/add-bottle.php" class="btn-primary">Add Bottle</a>
         <br/><br/><br/>
+
+        <?php
+        
+            if(isset($_SESSION['add']))
+            {
+                echo $_SESSION['add'];
+                unset($_SESSION['add']);
+            }
+        
+        ?>
 
         <div>
             <table class="tbl-full">
+                <!-- Heading Rows -->
                 <tr>
                     <th>Serial Number</th>
-                    <th>Bottle Size</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                    <th>Featured</th>
+                    <th>Active</th>
                     <th>Actions</th>
                 </tr>
 
-                <tr>
-                    <td>1.</td>
-                    <td>330ml</td>
-                    <td>
-                        <a href="#" class="btn-secondary">Update Details</a>
-                        <a href="#" class="btn-danger">Delete Bottle</a>
-                    </td>
-                </tr>
+                <?php
+                    //Query t get all Category from Database
+                    $sql = "SELECT * FROM tbl_bottle";
 
-                <tr>
-                    <td>2.</td>
-                    <td>500ml</td>
-                    <td>
-                        <a href="#" class="btn-secondary">Update Details</a>
-                        <a href="#" class="btn-danger">Delete Bottle</a>
-                    </td>
-                </tr>
+                    //Execute Query
+                    $res = mysqli_query($conn, $sql);
+
+                    //Count Rows
+                    $count = mysqli_num_rows($res);
+
+                    //Create Serial Number variable and assign value = 1
+                    $sn = 1;
+
+                    //Check if we have data in the databse or not
+                    if($count > 0)
+                    {
+                        //We have data in database
+                        //Get data and display it
+                        while($row = mysqli_fetch_assoc($res))
+                        {
+                            //get values from indivisual colomns
+                            $id = $row['id'];
+                            $title = $row['title'];
+                            $price = $row['price'];
+                            $image_name = $row['image_name'];
+                            $featured = $row['featured'];
+                            $active = $row['active'];
+
+                            //break php and add html for displaying data in html table
+                            ?>
+
+                                <tr>
+                                    <td><?php echo $sn++; ?></td>
+                                    <td><?php echo $title; ?></td>
+                                    <td><?php echo $price; ?></td>
+
+                                    <td>
+                                        <?php 
+                                            //Check whether image name is available or not
+                                            if($image_name != "")
+                                            {
+                                                //Dislpay the image
+                                                ?>
+                                                    <img src="<?php echo SITEURL; ?>images/bottle/<?php echo $image_name;?>" width="100px">
+                                                <?php
+                                            }
+                                            else
+                                            {
+                                                //Display the message
+                                                echo "<div class = 'error'> No Image Added </div>";
+                                            }
+                                        ?>
+                                    </td>
+
+                                    <td><?php echo $featured; ?></td>
+                                    <td><?php echo $active; ?></td>
+                                    <td>
+                                        <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class="btn-primary">Update Bottle</a>
+                                        <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Bottle</a>
+                                    </td>
+                                </tr>
+                            <?php
+
+                        }
+                    }
+                    else
+                    {
+                        //We do not have data
+                        //Display message inside table
+                        ?>
+                            <tr>
+                                <td colspan="6">
+                                    <div class="error"> No Bottles Added Yet. </div>
+                                </td>
+                            </tr>
+                        <?php
+                    }
+                ?>
             </table>
         </div>
 
@@ -44,3 +120,5 @@
 
 </body>
 </html>
+
+<?php include('partials/footer.php');?>

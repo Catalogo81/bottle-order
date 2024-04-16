@@ -199,7 +199,7 @@
 
                             //check if the image is removed or not
                             //if failed to remove display message and stop process
-                            if($remove == false)
+                            if($remove != false) //*****************************************FIX THIS BUG: if($remove == false)************************************************ */
                             {
                                 //failed to remove image
                                 $_SESSION['failed-remove'] = "<div class='error'>Failed to remove current image.</div>";

@@ -21,7 +21,7 @@
                     <td>Kgotso Matjato</td>
                     <td>kgotsomatjato</td>
                     <td>
-                        <a href="#" class="btn-secondary">Update Order</a>
+                        <a href="#" class="btn-primary">Update Order</a>
                         <a href="#" class="btn-danger">Delete Order</a>
                     </td>
                 </tr>
@@ -31,7 +31,7 @@
                     <td>Kgotso Matjato</td>
                     <td>kgotsomatjato</td>
                     <td>
-                        <a href="#" class="btn-secondary">Update Order</a>
+                        <a href="#" class="btn-primary">Update Order</a>
                         <a href="#" class="btn-danger">Delete Order</a>
                     </td>
                 </tr>
@@ -41,7 +41,7 @@
                     <td>Kgotso Matjato</td>
                     <td>kgotsomatjato</td>
                     <td>
-                        <a href="#" class="btn-secondary">Update Order</a>
+                        <a href="#" class="btn-primary">Update Order</a>
                         <a href="#" class="btn-danger">Delete Order</a>
                     </td>
                 </tr>
@@ -54,3 +54,5 @@
 
 </body>
 </html>
+
+<?php include('partials/footer.php');?>

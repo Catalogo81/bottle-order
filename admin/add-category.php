@@ -60,7 +60,7 @@
 
                 <tr>
                     <td colspan="2">
-                        <input type="submit" name="submit" value="Add Category" class="btn-secondary">
+                        <input type="submit" name="submit" value="Add Category" class="btn-primary">
                     </td>
                 </tr>
             </table>
@@ -111,10 +111,10 @@
                         if($upload == false)
                         {
                             //Set message
-                            $_SESSION['upload'] = "<div class= 'error'> Failed to Upload Image! </div>";
+                            $_SESSION['upload'] = "<div class='error'> Failed to Upload Image! </div>";
 
                             //Redirect to Add category
-                            header('loaction:'.SITEURL.'admin/add-category.php');
+                            header('location:'.SITEURL.'admin/add-category.php');
 
                             //Stop the process to no longer add data to our database
                             die();
