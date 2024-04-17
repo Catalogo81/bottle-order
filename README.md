@@ -9,8 +9,13 @@ Online store for clients to order bottles by size. Admin side manages the orders
 
 
 ## Frontend Pages 
-1. **index.html** - Home Page (Search Food, Some Categories, Featured Foods, Social Media link)
-2. **categories.html** - Lists all Categories on Single Page
+1. **index.html** - Home Page (Search Food, Some Categories, Featured Foods, Social Media link) *Only Featured AND Active Categories display on the Homepage. Limit of 3 categories*
+2. **categories.html** - Lists All Categories on Single Page *If they are Active they will display in our Categories Page*
+    
+    
+    *These two filters (FEATURED, ACTIVE) will be used for alerting users on the website whether the product is available or not.*
+
+
 3. **bottles.html** - Lists all bottles on a single page
 4. **order.html** - Page to Order Selected Food
 5. **category_bottle.html** - Page to list all the Bottle based on Category Selected

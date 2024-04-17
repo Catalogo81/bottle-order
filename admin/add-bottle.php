@@ -207,7 +207,7 @@
                 //3. insert into the database
                 //create SQL query to Svae or Add Bottle
                 //for numerical values we do not need to pass value inside quotes but for string value we need to add quotes
-                $sql2 = "INSERT INTO tbl_bottle SET 
+                $sql4 = "INSERT INTO tbl_bottle SET 
                     title = '$title',
                     description = '$description',
                     price = $price,
@@ -218,11 +218,11 @@
                 ";
 
                 //execute the query
-                $res2 = mysqli_query($conn, $sql2);
+                $res4 = mysqli_query($conn, $sql4);
 
                 //check if data is inserted or not
                 //4. redirect with message to Mange Bottle Page
-                if($res2 == true)
+                if($res4 == true)
                 {
                     //data is inserted successfully
                     $_SESSION['add'] = "<div class = 'success'>Bottle Added Successfully!</div>";

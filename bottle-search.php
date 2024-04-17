@@ -46,51 +46,13 @@
     <section class="bottle-search text-center">
         <div class="container">
             
-            <form action="bottle-search.html" method="POST">
-                <input type="search" name="search" placeholder="Search for Bottles.." required>
-                <input type="submit" name="submit" value="Search" class="btn btn-primary">
-            </form>
+            <h2>Bottles on Your Search <a href="#" class="text-white">"..."</a></h2>
 
         </div>
     </section>
     <!-- bottle sEARCH Section Ends Here -->
 
-    <!-- CAtegories Section Starts Here -->
-    <section class="categories text-center" >
-        <div class="container">
-            <h2 class="text-center">Explore Bottles</h2>
 
-            <!-- Category item 1-->
-            <a href="category-bottles.html">
-            <div class="box-3 float-container">
-                <img src="images/300ml.png" alt="330ml" class="img-responsive img-curve">
-
-                <h3 class="float-text">330ml</h3>
-            </div>
-            </a>
-
-            <!-- Category item 2-->
-            <a href="#">
-            <div class="box-3 float-container">
-                <img src="images/300ml.png" alt="500ml" class="img-responsive img-curve">
-
-                <h3 class="float-text">500ml</h3>
-            </div>
-            </a>
-
-            <!-- Category item 3-->
-            <a href="#">
-            <div class="box-3 float-container">
-                <img src="images/500ml.png" alt="1000ml" class="img-responsive img-curve">
-
-                <h3 class="float-text">1000ml</h3>
-            </div>
-            </a>
-
-            <div class="clearfix"></div>
-        </div>
-    </section>
-    <!-- Categories Section Ends Here -->
 
     <!-- bottle MEnu Section Starts Here -->
     <section class="bottle-menu">
@@ -111,7 +73,7 @@
                     </p>
                     <br>
 
-                    <a href="order.html" class="btn btn-primary">Order Now</a>
+                    <a href="#" class="btn btn-primary">Order Now</a>
                 </div>
             </div>
 
@@ -154,7 +116,7 @@
             <!-- item 4 -->
             <div class="bottle-menu-box">
                 <div class="bottle-menu-img">
-                    <img src="images/5L_10L.jpeg" alt="10L and 5L" class="img-responsive img-curve">
+                    <img src="images/5L_10L.jpeg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                 </div>
 
                 <div class="bottle-menu-desc">
@@ -165,84 +127,16 @@
                     </p>
                     <br>
 
-                    <a class="btn btn-primary">Coming Soon...</a>
+                    <a href="#" class="btn btn-primary">Coming Soon...</a>
                 </div>
-            </div> 
-
-            <!-- item 5 -->
-            <!-- <div class="bottle-menu-box">
-                <div class="bottle-menu-img">
-                    <img src="images/menu-pizza.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
-                </div>
-
-                <div class="bottle-menu-desc">
-                    <h4>Bottle Title</h4>
-                    <p class="bottle-price">$2.3</p>
-                    <p class="bottle-detail">
-                        Made with Italian Sauce, Chicken, and organice vegetables.
-                    </p>
-                    <br>
-
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                </div>
-            </div> -->
-
-            <!-- item 6 -->
-            <!-- <div class="bottle-menu-box">
-                <div class="bottle-menu-img">
-                    <img src="images/menu-momo.jpg" alt="Chicke Hawain Momo" class="img-responsive img-curve">
-                </div>
-
-                <div class="foobottled-menu-desc">
-                    <h4>Chicken Steam Momo</h4>
-                    <p class="bottle-price">$2.3</p>
-                    <p class="bottle-detail">
-                        Made with Italian Sauce, Chicken, and organice vegetables.
-                    </p>
-                    <br>
-
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                </div>
-            </div> -->
+            </div>
 
 
             <div class="clearfix"></div>
-
             
-
         </div>
 
-        <p class="text-center">
-            <a href="#">See All Bottles</a>
-        </p>
     </section>
-    <!-- Bottle Menu Section Ends Here -->
+    <!-- bottle Menu Section Ends Here -->
 
-    <!-- social Section Starts Here -->
-    <!-- <section class="social">
-        <div class="container text-center">
-            <ul>
-                <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a>
-                </li>
-                <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
-                </li>
-                <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
-                </li>
-            </ul>
-        </div>
-    </section> -->
-    <!-- social Section Ends Here -->
-
-    <!-- footer Section Starts Here -->
-    <section class="footer">
-        <div class="container text-center">
-            <p>All rights reserved. Designed By <a href="#">Kgotso Matjato</a></p>
-        </div>
-    </section>
-    <!-- footer Section Ends Here -->
-
-</body>
-</html>
+<?php include('partials-front/footer.php');?>
