@@ -67,8 +67,8 @@
 
         //1. process data by getting it from the Form using Post method
         //echo $full_name = $_POST['full_name'];
-        $full_name = $_POST['full_name'];
-        $username = $_POST['username'];
+        $full_name = mysqli_real_escape_string($conn, $_POST['full_name']);
+        $username = mysqli_real_escape_string($conn, $_POST['username']);
         $password = md5($_POST['password']); //md5 is a PHP encryption method
 
         //2. SQL Query to save data into Database

@@ -123,10 +123,10 @@
 
                     $status = "Ordered"; //Ordered, On Delivery, Delivered, Cancelled
 
-                    $customer_name = $_POST['full_name'];
-                    $customer_contact = $_POST['contact'];
-                    $customer_email = $_POST['email'];
-                    $customer_address = $_POST['address'];
+                    $customer_name = mysqli_real_escape_string($conn, $_POST['full_name']);
+                    $customer_contact = mysqli_real_escape_string($conn, $_POST['contact']);
+                    $customer_email = mysqli_real_escape_string($conn, $_POST['email']);
+                    $customer_address = mysqli_real_escape_string($conn, $_POST['address']);
 
 
                     //Save the order in Database

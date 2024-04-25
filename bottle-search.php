@@ -9,7 +9,10 @@
 
                 //get value is not null
                 if(isset($_POST['search']) && $_POST['search'] != "") {
-                    $search = $_POST['search'];
+                    // $search = $_POST['search'];
+                    
+                    //SQL Injection Prevention
+                    $search = mysqli_real_escape_string($conn, $_POST['search']);
                 }
                 //echo $search;
             ?>

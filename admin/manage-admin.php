@@ -27,7 +27,7 @@
                             <th>Serial Number</th>
                             <th>Full Name</th>
                             <th>Username</th>
-                            <th>Actions</th>
+                            <!-- <th>Actions</th> -->
                         </tr>
 
                         <!-- Dipsplay all data from our database -->
@@ -68,8 +68,8 @@
                                                 <td><?php echo $full_name; ?></td>
                                                 <td><?php echo $username; ?></td>
                                                 <td>
-                                                    <a href="#" class="btn-primary">Update Admin</a>
-                                                    <a href="#" class="btn-danger">Delete Admin</a>
+                                                    <!-- <a href="#" class="btn-primary">Update Admin</a>
+                                                    <a href="#" class="btn-danger">Delete Admin</a> -->
                                                 </td>
                                             </tr>
                                         <?php

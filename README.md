@@ -28,6 +28,9 @@ Online store for clients to order bottles by size. Admin side manages the orders
 5. **manage-orders.php** - Manages all Orders in the database (Actions: pending, successful, declined, delete) Orders ordered by latest order (date)
 6. **login/logout.php** - Admin Access Control and Authorization using SQL
 
+7. **SQL Injection**: Protection on all database captured queries passed in our code.
+
+
 ## For Sponsor or Project Enquiry
 1. Email - peacematjato@gmail.com
 

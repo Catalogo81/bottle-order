@@ -1,4 +1,4 @@
-<?php include('partials/menu.php');?>
+<?php ob_start(); include('partials/menu.php');?>
 
 <div class="main-content">
     <div class="wrapper">
@@ -202,13 +202,13 @@
 
                 //1. Get all values from Bottle Form
                 $id = $_POST['id'];
-                $title = $_POST['title'];
-                $description = $_POST['description'];
-                $price = $_POST['price'];
-                $current_image = $_POST['current_image'];
-                $category = $_POST['category'];
-                $featured = $_POST['featured'];
-                $active = $_POST['active'];
+                $title = mysqli_real_escape_string($conn, $_POST['title']);
+                $description = mysqli_real_escape_string($conn, $_POST['description']);
+                $price = mysqli_real_escape_string($conn, $_POST['price']);
+                $current_image = mysqli_real_escape_string($conn, $_POST['current_image']);
+                $category = mysqli_real_escape_string($conn, $_POST['category']);
+                $featured = mysqli_real_escape_string($conn, $_POST['featured']);
+                $active = mysqli_real_escape_string($conn, $_POST['active']);
 
                 //echo "$current_image";
                 
@@ -331,6 +331,8 @@
                     exit(); // Ensure script stops execution after header redirect
                 }
             }
+
+            ob_end_flush();
         ?>
 
     </div>

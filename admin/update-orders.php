@@ -145,10 +145,10 @@
 
                 $status = $_POST['status'];
                 
-                $customer_name = $_POST['customer_name'];
-                $customer_contact = $_POST['customer_contact'];
-                $customer_email = $_POST['customer_email'];
-                $customer_address = $_POST['customer_address'];
+                $customer_name = mysqli_real_escape_string($conn, $_POST['customer_name']);
+                $customer_contact = mysqli_real_escape_string($conn, $_POST['customer_contact']);
+                $customer_email = mysqli_real_escape_string($conn, $_POST['customer_email']);
+                $customer_address = mysqli_real_escape_string($conn, $_POST['customer_address']);
 
                 //Update the database
                 $sql2 = "UPDATE tbl_order SET

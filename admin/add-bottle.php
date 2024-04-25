@@ -128,10 +128,10 @@
                 //echo "clicked";
 
                 //1. get the data from the form
-                $title = $_POST['title'];
-                $description = $_POST['description'];
-                $price = $_POST['price'];
-                $category = $_POST['category'];
+                $title = mysqli_real_escape_string($conn, $_POST['title']);
+                $description = mysqli_real_escape_string($conn, $_POST['description']);
+                $price = mysqli_real_escape_string($conn, $_POST['price']);
+                $category = mysqli_real_escape_string($conn, $_POST['category']);
 
                 //check if radio button for feature and active is checked or not
                 if(isset($_POST['featured']))
@@ -160,7 +160,7 @@
                 if(isset($_FILES['image']['name']))
                 {
                     //get the details from the selected image
-                    $image_name = $_FILES['image']['name'];
+                    $image_name = mysqli_real_escape_string($conn, $_FILES['image']['name']);
 
                     //check if image is selected or not, upload image only if selected 
                     if($image_name != "")

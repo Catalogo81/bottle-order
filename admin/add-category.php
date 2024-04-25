@@ -76,7 +76,7 @@
                 //echo "Clicked";
 
                 //1. Get the Value from Category Form
-                $title = $_POST['title'];
+                $title = mysqli_real_escape_string($conn, $_POST['title']);
 
                 //check if image is selected or not and check value for image name accordingly
                 //print_r($_FILES['image']); //displays the array of data 

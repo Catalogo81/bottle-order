@@ -142,10 +142,10 @@
 
                 //1. Get all values from Category Form
                 $id = $_POST['id'];
-                $title = $_POST['title'];
+                $title = mysqli_real_escape_string($conn, $_POST['title']);
                 $current_image = $_POST['current_image'];
-                $featured = $_POST['featured'];
-                $active = $_POST['active'];
+                $featured = mysqli_real_escape_string($conn, $_POST['featured']);
+                $active = mysqli_real_escape_string($conn, $_POST['active']);
                 
                 
                 //2. Update the new image if selected
