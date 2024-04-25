@@ -4,7 +4,7 @@
     <section class="bottle-search text-center">
         <div class="container">
             
-            <form action="bottle-search.html" method="POST">
+            <form action="<?php echo SITEURL; ?>bottle-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Bottles.." required>
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </form>

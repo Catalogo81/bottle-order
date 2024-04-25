@@ -28,7 +28,7 @@
 
                         ?>
                             <!-- Category item -->
-                            <a href="category-bottles.html">
+                            <a href="<?php echo SITEURL; ?>category-bottles.php?category_id=<?php echo $id ?>">
                             <div class="box-3 float-container">
                                 <?php
                                     //check if image is available or not

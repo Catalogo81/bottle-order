@@ -7,7 +7,6 @@
 
         <?php
             //Display info messages
-
             if(isset($_SESSION['upload']))
             {
                 echo $_SESSION['upload'];
@@ -312,7 +311,7 @@
                 if($res3 == true)
                 {
                     //Query executed and Bottle updated
-                    $_SESSION['update'] = "<div class='success'>Bottle Updated Successfully! </div>";
+                    $_SESSION['add'] = "<div class='success'>Bottle Updated Successfully! </div>";
 
                     //Rediect to Manage Bottle Page
                     header('location:'.SITEURL.'admin/manage-bottles.php');
@@ -323,7 +322,7 @@
                 else
                 {
                     //Failed to Add the Bottle
-                    $_SESSION['update'] = "<div class= 'error'>Failed to Update Bottle! </div>";
+                    $_SESSION['add'] = "<div class= 'error'>Failed to Update Bottle! </div>";
 
                     //Rediect to Manage Bottle Page
                     header('location:'.SITEURL.'admin/manage-bottles.php');

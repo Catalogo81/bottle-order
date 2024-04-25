@@ -18,6 +18,18 @@
                 unset($_SESSION['add']);
             }
 
+            if(isset($_SESSION['success']))
+            {
+                echo $_SESSION['success'];
+                unset($_SESSION['success']);
+            }
+
+            if(isset($_SESSION['error']))
+            {
+                echo $_SESSION['error'];
+                unset($_SESSION['error']);
+            }
+
             //Display the message for deleting a bottle data
             if(isset($_SESSION['delete']))
             {

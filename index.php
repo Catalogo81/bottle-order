@@ -4,7 +4,7 @@
     <section class="bottle-search text-center">
         <div class="container">
             
-            <form action="bottle-search.html" method="POST">
+            <form action="<?php echo SITEURL; ?>bottle-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Bottles.." required>
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </form>
@@ -25,6 +25,7 @@
 
                 //execute the query
                 $res = mysqli_query($conn, $sql);
+                //echo "conn: " . print_r($conn);
 
                 //count the rows to check if category is available or not
                 $count = mysqli_num_rows($res);
@@ -41,7 +42,7 @@
 
                         ?>
                             <!-- Category item -->
-                            <a href="category-bottles.html">
+                            <a href="<?php echo SITEURL; ?>category-bottles.php?category_id=<?php echo $id ?>">
                             <div class="box-3 float-container">
                                 <?php
                                     //check if image is available or not
@@ -131,13 +132,13 @@
 
                             <div class="bottle-menu-desc">
                                 <h4><?php echo $title; ?></h4>
-                                <p class="bottle-price">R<?php echo $price; ?></p>
-                                <p class="bottle-detail">
-                                    <?php echo $description; ?>
-                                </p>
-                                <br>
+                                    <p class="bottle-price">R<?php echo $price; ?></p>
+                                    <p class="bottle-detail">
+                                        <?php echo $description; ?>
+                                    </p>
+                                    <br>
 
-                                <a href="#" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-primary">Order Now</a>
                             </div>
                         </div>
                     <?php
@@ -150,78 +151,6 @@
             }
         
             ?>
-
-            <!-- item 1 -->
-            <!-- <div class="bottle-menu-box">
-                <div class="bottle-menu-img">
-                    <img src="images/300ml_bottles.jpeg" alt="330ml" class="img-responsive img-curve">
-                </div>
-
-                <div class="bottle-menu-desc">
-                    <h4>330ml Bottle</h4>
-                    <p class="bottle-price">R3.3</p>
-                    <p class="bottle-detail">
-                        The bottle features a secure screw-on cap, preventing leaks and spills. Its transparent design allows for easy visibility of the contents inside. 
-                    </p>
-                    <br>
-
-                    <a href="order.html" class="btn btn-primary">Order Now</a>
-                </div>
-            </div>
-
-            <!-- item 2 -->
-            <!-- <div class="bottle-menu-box">
-                <div class="bottle-menu-img">
-                    <img src="images/500ml_bottles.jpeg" alt="500ml" class="img-responsive img-curve">
-                </div>
-
-                <div class="bottle-menu-desc">
-                    <h4>500ml Bottle</h4>
-                    <p class="bottle-price">R5.3</p>
-                    <p class="bottle-detail">
-                        The bottle features a secure screw-on cap, preventing leaks and spills. Its transparent design allows for easy visibility of the contents inside.
-                    </p>
-                    <br>
-
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                </div>
-            </div> -->
-
-            <!-- item 3 -->
-            <!-- <div class="bottle-menu-box">
-                <div class="bottle-menu-img">
-                    <img src="images/1000ml_bottles.avif" alt="1000ml" class="img-responsive img-curve">
-                </div>
-
-                <div class="bottle-menu-desc">
-                    <h4>1000ml Bottle</h4>
-                    <p class="bottle-price">R7.3</p>
-                    <p class="bottle-detail">
-                        The bottle features a secure screw-on cap, preventing leaks and spills. Its transparent design allows for easy visibility of the contents inside.
-                    </p>
-                    <br>
-
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                </div>
-            </div> -->
-
-            <!-- item 4 -->
-            <!-- <div class="bottle-menu-box">
-                <div class="bottle-menu-img">
-                    <img src="images/5L_10L.jpeg" alt="10L and 5L" class="img-responsive img-curve">
-                </div>
-
-                <div class="bottle-menu-desc">
-                    <h4>5L's and 10L's</h4>
-                    <p class="bottle-price">R...</p>
-                    <p class="bottle-detail">
-                        The bottle features a secure screw-on cap, preventing leaks and spills. Its transparent design allows for easy visibility of the contents inside. 10L and 5L Bottles coming soon.
-                    </p>
-                    <br>
-
-                    <a class="btn btn-primary">Coming Soon...</a>
-                </div>
-            </div>  --> 
 
             <div class="clearfix"></div>
 

@@ -230,7 +230,7 @@
                 }
                 else
                 {
-                    //failed toinsert data  
+                    //failed to insert data  
                     $_SESSION['add'] = "<div class = 'error'>Failed to Add Bottle!</div>";
                     header('location:'.SITEURL.'admin/manage-bottles.php');
                 }
