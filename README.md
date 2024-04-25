@@ -21,7 +21,7 @@ Online store for clients to order bottles by size. Admin side manages the orders
 6. **bottle_search.html** - Page to list all the Bottle based on Search keyword
 
 ## Backend Pages 
-1. **index.php** - Admin Dashboard (Categories, Bottle Items, Total Orders, Total Revenue)
+1. **index.php** - Admin Dashboard (Categories, Bottle Items, Total Orders, Revenue Generated = Only 'Delivered' Orders are considered on the Revenue Generated)
 2. **manage-admin.php** - Lists all Administrators
 3. **manage-categories.php** - Lists all bottle categories on a single page
 4. **manage-bottles.php** - Lists all bottles on a single page

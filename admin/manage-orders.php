@@ -80,19 +80,19 @@
                                             
                                             if($status == "Ordered")
                                             {
-                                                echo "<label>$status</label>";
+                                                echo "<label><b>$status</label></b>";
                                             }
                                             elseif($status == "On Delivery")
                                             {
-                                                echo "<label style='color: orange;'>$status</label>";
+                                                echo "<label style='color: orange;'><b>$status</b></label>";
                                             }
                                             elseif($status == "Delivered")
                                             {
-                                                echo "<label style='color: green;'>$status</label>";
+                                                echo "<label style='color: green;'><b>$status</b></label>";
                                             }
                                             elseif($status == "Cancelled")
                                             {
-                                                echo "<label style='color: red;'>$status</label>";
+                                                echo "<label style='color: red;'><b>$status</b></label>";
                                             }
                                         ?>
                                     </td>
@@ -101,7 +101,7 @@
                                     <td><?php echo $customer_contact; ?></td>
                                     <td><?php echo $customer_email; ?></td>
                                     <td><?php echo $customer_address; ?></td>
-                                    <td>
+                                    <td style="width: 150px;">
                                         <a href="<?php echo SITEURL; ?>admin/update-orders.php?id=<?php echo $id; ?>" class="btn-primary" class="btn-primary">Update Order</a>
                                     </td>
                                 </tr>
