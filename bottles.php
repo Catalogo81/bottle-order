@@ -72,7 +72,7 @@
                                 </p>
                                 <br>
 
-                                <a href="#" class="btn btn-primary">Order Now</a>
+                                <a href="<?php SITEURL; ?>order.php?bottle_id=<?php echo $id ?>" class="btn btn-primary">Order Now</a>
                             </div>
                         </div>
                     <?php
@@ -84,59 +84,7 @@
                 echo "<div class='error'>Bottles currently unavailable....</div>";
             }
         
-            ?>      
-
-            <!-- <div class="bottle-menu-box">
-                <div class="bottle-menu-img">
-                    <img src="images/500ml_bottles.jpeg" alt="500ml" class="img-responsive img-curve">
-                </div>
-
-                <div class="bottle-menu-desc">
-                    <h4>500ml Bottle</h4>
-                    <p class="bottle-price">R5.3</p>
-                    <p class="bottle-detail">
-                        The bottle features a secure screw-on cap, preventing leaks and spills. Its transparent design allows for easy visibility of the contents inside.
-                    </p>
-                    <br>
-
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                </div>
-            </div>
-
-            <div class="bottle-menu-box">
-                <div class="bottle-menu-img">
-                    <img src="images/1000ml_bottles.avif" alt="1000ml" class="img-responsive img-curve">
-                </div>
-
-                <div class="bottle-menu-desc">
-                    <h4>1000ml Bottle</h4>
-                    <p class="bottle-price">R7.3</p>
-                    <p class="bottle-detail">
-                        The bottle features a secure screw-on cap, preventing leaks and spills. Its transparent design allows for easy visibility of the contents inside.
-                    </p>
-                    <br>
-
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                </div>
-            </div>
-
-            item 4
-            <div class="bottle-menu-box">
-                <div class="bottle-menu-img">
-                    <img src="images/5L_10L.jpeg" alt="10L and 5L" class="img-responsive img-curve">
-                </div>
-
-                <div class="bottle-menu-desc">
-                    <h4>5L's and 10L's</h4>
-                    <p class="bottle-price">R...</p>
-                    <p class="bottle-detail">
-                        The bottle features a secure screw-on cap, preventing leaks and spills. Its transparent design allows for easy visibility of the contents inside. 10L and 5L Bottles coming soon.
-                    </p>
-                    <br>
-
-                    <a href="#" class="btn btn-primary">Coming Soon...</a>
-                </div>
-            </div> -->
+            ?>
 
             <div class="clearfix"></div>
 

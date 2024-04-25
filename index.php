@@ -13,6 +13,14 @@
     </section>
     <!-- bottle sEARCH Section Ends Here -->
 
+    <?php 
+        if(isset($_SESSION['order']))
+        {
+            echo $_SESSION['order'];
+            unset($_SESSION['order']);
+        }
+    ?>
+
     <!-- CAtegories Section Starts Here -->
     <section class="categories text-center" >
         <div class="container">
@@ -138,7 +146,7 @@
                                     </p>
                                     <br>
 
-                        <a href="#" class="btn btn-primary">Order Now</a>
+                                <a href="<?php SITEURL; ?>order.php?bottle_id=<?php echo $id ?>" class="btn btn-primary">Order Now</a>
                             </div>
                         </div>
                     <?php

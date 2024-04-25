@@ -16,7 +16,7 @@ Online store for clients to order bottles by size. Admin side manages the orders
     *These two filters (FEATURED, ACTIVE) will be used for alerting users on the website whether the product is available or not.*
 
 
-4. **order.html** - Page to Order Selected Food
+4. **order.html** - Page to Order Selected Food ('status' of orders: Ordered, On Delivery, Delivered, Cancelled)
 5. **category_bottle.html** - Page to list all the Bottle based on Category Selected
 6. **bottle_search.html** - Page to list all the Bottle based on Search keyword
 
@@ -25,7 +25,7 @@ Online store for clients to order bottles by size. Admin side manages the orders
 2. **manage-admin.php** - Lists all Administrators
 3. **manage-categories.php** - Lists all bottle categories on a single page
 4. **manage-bottles.php** - Lists all bottles on a single page
-5. **manage-orders.php** - Manages all Orders in the database (Actions: pending, successful, declined, delete)
+5. **manage-orders.php** - Manages all Orders in the database (Actions: pending, successful, declined, delete) Orders ordered by latest order (date)
 6. **login/logout.php** - Admin Access Control and Authorization using SQL
 
 ## For Sponsor or Project Enquiry

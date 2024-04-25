@@ -62,6 +62,7 @@
                     while($row2 = mysqli_fetch_assoc($res2))
                     {
                         //get the details from our DB
+                        $id = $row2['id'];
                         $title = $row2['title'];
                         $description = $row2['description'];
                         $price = $row2['price'];
@@ -96,7 +97,7 @@
                                     </p>
                                     <br>
 
-                                    <a href="#" class="btn btn-primary">Order Now</a>
+                                    <a href="<?php SITEURL; ?>order.php?bottle_id=<?php echo $id ?>" class="btn btn-primary">Order Now</a>
                                 </div>
                             </div>
                         <?php
